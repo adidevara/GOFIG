@@ -54,9 +54,7 @@ The third argument is the name of the output file and should include the “.csv
 8. Difference between the up and down regulated genes (a z-score like metric)*
 9. Option to include the term for Visualization.**
 
-** The z-score like metric is simply a means to display the difference between the up and down regulated genes in relation to the total number of genes. The formula we used to produce this metric is: 
-
- $\frac{(up \ regulated \ genes - down \ regulated \ genes}{\sqrt[2]{(total \ genes)}}$  
+** The z-score like metric is simply a means to display the difference between the up and down regulated genes in relation to the total number of genes. The formula we used to produce this metric was the difference between the up regulated and down regulated genes divided by the total number of genes. 
 
 **Option to include the term for Visualization allows for the user to select which gene ontology terms will be included to generate the final Figure. As some of the terms are very similar it may be redundant to include them in the visuals. If the user chooses to change the default entry from Y to N, the gene ontology will not be included in the visualization.
 
