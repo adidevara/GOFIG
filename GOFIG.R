@@ -290,8 +290,6 @@ ontb2bBar <-
         "PValue"
       )
     
-    
-    
     #Separate objects into BP, CC, and MF and give top 20 Ontologies
     BP <- filter(GO, Ont == "BP")
     CC <- filter(GO, Ont == "CC")
@@ -609,8 +607,6 @@ ontBubble <-
     print(CCbubblePlot)
     print(MFbubblePlot)
     dev.off()
-    
-    
   }
 
 ontComp <- function(InputOne = "",
@@ -676,6 +672,8 @@ ontVennSub <-
            FirstInputColor = 'lightgreen',
            SecondInputColor = 'blue') {
     input <- read.csv(InputFile)
+
+    # BP
     bp <- input[input["Ont"] == "BP", ]
     set1 <- bp$X[bp$vec == "Input1" | bp$vec == "Both"]
     set2 <- bp$X[bp$vec == "Input2" | bp$vec == "Both"]
