@@ -87,7 +87,7 @@ ontBar <-
   function(InputFile = "",
            OntologyCutoff = "10",
            BarColor = "lightgreen",
-           LineColor = "darkblue") {
+           PointColor = "darkblue") {
     #Load table output from GeneOnt R
     GO <- read.csv(file = InputFile)
     GO <- filter(GO, Y_or_N == "Y")
@@ -174,7 +174,7 @@ ontBar <-
         scale_fill_manual(name = NULL,
                           values = c("Number of Genes" = BarColor)) +
         scale_color_manual(name = NULL,
-                           values = c("Adjusted P Value" = LineColor)) +
+                           values = c("Adjusted P Value" = PointColor)) +
         theme(legend.position = "bottom") +
         theme(plot.title = element_text(vjust = 2)) +
         theme(aspect.ratio = 2 / 3) +
@@ -212,7 +212,7 @@ ontBar <-
         scale_fill_manual(name = NULL,
                           values = c("Number of Genes" = BarColor)) +
         scale_color_manual(name = NULL,
-                           values = c("Adjusted P Value" = LineColor)) +
+                           values = c("Adjusted P Value" = PointColor)) +
         theme(legend.position = "bottom") +
         theme(plot.title = element_text(vjust = 2)) +
         theme(aspect.ratio = 2 / 3) +
@@ -250,7 +250,7 @@ ontBar <-
         scale_fill_manual(name = NULL,
                           values = c("Number of Genes" = BarColor)) +
         scale_color_manual(name = NULL,
-                           values = c("Adjusted P Value" = LineColor)) +
+                           values = c("Adjusted P Value" = PointColor)) +
         theme(legend.position = "bottom") +
         theme(plot.title = element_text(vjust = 2)) +
         theme(aspect.ratio = 2 / 3) +
