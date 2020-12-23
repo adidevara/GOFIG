@@ -6,7 +6,7 @@ tags:
   - Enrichment Analysis 
   - Data visualization 
 authors:
-  - name: Aditya K. Devarakonda^
+  - name: Aditya K. Devarakonda
     orcid: 0000-0002-7014-3029
     affiliation: "1"
   - name: Eric G. Rafalovsky 
