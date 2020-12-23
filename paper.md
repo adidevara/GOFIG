@@ -1,5 +1,5 @@
 ---
-title: 'GOFIG: A tool for Gene Ontology Enrichment Analysis and Visualization'
+title: 'GOFIG: A Tool for Gene Ontology Enrichment Analysis and Visualization'
 tags:
   - R
   - Gene Ontology 
