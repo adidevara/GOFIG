@@ -4,9 +4,13 @@
 Aditya K. Devarakonda, Eric G. Rafalovsky, Tae Lee Jin Ph.D., Ashok Sharma Ph.D.
 
 
-# Introduction
+# Statement of Need
 
-GOFIG is a tool for gene ontology enrichment analysis and visualization. This tool is very helpful in generating publication quality figures for the manuscripts. A list of differentially expressed genes and log fold-changes are used as input. Various ontology terms over-represented in the gene list are identified and p-values are assigned, which represent the significance of enrichment of each ontology term. Along with the ontology terms and the p-values, the analysis output includes the total number of genes, the number of upregulated genes, and downregulated genes in each ontology term. Ontology terms will only be included in the output if they contain at least 10% of the total number of differentially expressed genes provided in the input list. All p-values are calculated based on the total number of genes in the ontology rather than just the number of upregulated or downregulated genes. After analysis, the output is saved to the working directory as a CSV file. This file can be used for image production using “ontBar” function available in the package.
+While there are many existing packages and online programs for Gene Ontology (GO) enrichment analysis and visualization, few are very easy to use. The majority of these packages only accept a single format of Gene ID type without conversion, while popular online tools simply do not provide the breadth of data in their outputs which may be present elsewhere. We saw a need for a simple program which could take an input in a common file format with any type of gene identification and handle GO enrichment analysis while allowing for high quality down-stream visualization. We also noticed that there were no existing packages which could effectively compare the results of two separate enrichment analyses and depict their shared and unique ontologies. To address these needs we created GOFIG. 
+
+## Introduction 
+
+GOFIG is a tool for gene ontology enrichment analysis and visualization. This tool is very helpful in generating publication quality figures for the manuscripts. A list of differentially expressed genes and log fold-changes are used as input. Various ontology terms over-represented in the gene list are identified and p-values are assigned, which represent the significance of enrichment of each ontology term. Along with the ontology terms and the p-values, the analysis output includes the total number of genes, the number of upregulated genes, and downregulated genes in each ontology term. Ontology terms will only be included in the output if they contain at least 10% of the total number of differentially expressed genes provided in the input list. All p-values are calculated based on the total number of genes in the ontology rather than just the number of upregulated or downregulated genes. After analysis, the output is saved to the working directory as a CSV file. If multiple analyses are performed, they can be compared with in built functionality as well. The results of the enrichment analysis as well as comparisons can be visualized through the use of any of the various visualization functions. 
 
 ## Dependencies
 
@@ -17,6 +21,8 @@ The required packages which must be installed and loaded for the functions in GO
 `limma` and `org.Hs.eg.db` must be loaded through Bioconductor. To do this, use the `install.packages()` function to install BiocManager after which you can use the BiocManager::install package to load `limma` and `org.Hs.eg.db`.
 
 GOFIG requires R version `>=4.0.3` 
+
+Be sure to load the libraries that have been installed with the `library()` function. 
 
 ## Directory Setting 
 
