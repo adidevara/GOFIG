@@ -45,3 +45,4 @@ Aside from ease of use, `GOFIG` offers the unique functionality of comparing the
 The functionality along with the ease of use makes `GOFIG` and optimal tool for investigators looking to create data visuals to better represent the meaning of differential expression analysis data from RNA sequencing.
 
 
+# References
