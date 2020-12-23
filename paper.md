@@ -10,13 +10,12 @@ authors:
     orcid: 0000-0002-7014-3029
     affiliation: "1"
   - name: Eric G. Rafalovsky 
-    affiliation: "2'
+    affiliation: "2"
   - name: Tae-Jin Lee Ph.D. 
     affiliation: "1"
   - name: Ashok Sharma Ph.D. 
     orcid: 0000-0001-9597-4374
     affiliation: "1"
-
 affiliations:
  - name: Center for Biotechnology and Genomic Medicine, Augusta University, Augusta, Georgia, United States
    index: 1
@@ -25,6 +24,9 @@ affiliations:
 date: 22 December 2020
 bibliography: paper.bib
 ---
+
+
+  
 
 # Summary
 
