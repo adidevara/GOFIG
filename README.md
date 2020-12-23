@@ -8,17 +8,19 @@ Aditya K. Devarakonda, Eric G. Rafalovsky, Tae Lee Jin Ph.D., Ashok Sharma Ph.D.
 
 GOFIG is a tool for gene ontology enrichment analysis and visualization. This tool is very helpful in generating publication quality figures for the manuscripts. A list of differentially expressed genes and log fold-changes are used as input. Various ontology terms over-represented in the gene list are identified and p-values are assigned, which represent the significance of enrichment of each ontology term. Along with the ontology terms and the p-values, the analysis output includes the total number of genes, the number of upregulated genes, and downregulated genes in each ontology term. Ontology terms will only be included in the output if they contain at least 10% of the total number of differentially expressed genes provided in the input list. All p-values are calculated based on the total number of genes in the ontology rather than just the number of upregulated or downregulated genes. After analysis, the output is saved to the working directory as a CSV file. This file can be used for image production using “ontBar” function available in the package.
 
-## Required Packages
+## Dependencies
 
-The required packages which must be installed and loaded for the functions in GOFIG to work include: ggplot2, dplyr, VennDiagram, limma, and org.Hs.eg.db. 
+The required packages which must be installed and loaded for the functions in GOFIG to work include: `ggplot2`, `dplyr`, `VennDiagram`, `limma`, and `org.Hs.eg.db`. 
 
-ggplot2, dplyr, and VennDiagram can all be loaded in CRAN using the install.packages function. 
+`ggplot2`, `dplyr`, and `VennDiagram` can all be loaded in CRAN using the `install.packages()` function. 
 
-limma and org.Hs.eg.db must be loaded through Bioconductor. To do this, use the install.packages function to install BiocManager after which you can use the BiocManager::install package to load limma and org.Hs.eg.db.
+`limma` and `org.Hs.eg.db` must be loaded through Bioconductor. To do this, use the `install.packages()` function to install BiocManager after which you can use the BiocManager::install package to load `limma` and `org.Hs.eg.db`.
+
+GOFIG requires R version `>=4.0.3` 
 
 ## Directory Setting 
 
-The package automatically searches for input files and saves output files to the working directory. In order to ensure that the package works properly, make sure to set your working directory to the directory which contains your input file.
+The package automatically searches for input file/s and saves output files to the working directory. In order to ensure that the package works properly, make sure to set your working directory to the directory which contains your input file.
 
 ## geneOnt : A function for gene ontology enrichment analysis
 
@@ -64,7 +66,7 @@ The third argument is the name of the output file and should include the “.csv
 
 This function produces three bar plots (cellular components, molecular functions, and biological processes), containing the most significant ontologies (by p-value) in each category. A line depicting the p-value of each ontology is also overlayed on the barplots.
 
-InputFile = "": The name of the csv file generated from the _geneOnt_ function of the package as previously described.
+InputFile = "": The name of the csv file generated from the `geneOnt` function of the package as previously described.
 
 OntologyCutoff: The number of ontologies to be included in each graph. The default value is 10, and if this number exceeds the number of ontologies present in the analysis, all will be included.
 
@@ -76,7 +78,7 @@ PointColor: The color of the p-value line. The default is “darkblue”.
 
 The above function production produces a three back to back bar plots, each containing the most significant ontologies (by p-value) in the cellular component, molecular function, and biological processes category. The bar on the right side represents the number of upregulated genes in an ontology and the bar on the left side represents the number of downregulated genes in an ontology. Overlayed on the bars on the right is a series of points which depict the p-value of each ontology.
 
-InputFile = "": The name of the csv file generated from the _geneOnt_ function of the package as previously described.
+InputFile = "": The name of the csv file generated from the `geneOnt` function of the package as previously described.
 
 OntologyCutoff: The number of ontologies to be included in each graph. The default value is 10, and if this number exceeds the number of ontologies present in the analysis, all will be included.
 
@@ -102,20 +104,20 @@ BubbleFill: The fill color of the bubbles produced on the plot. The default is �
 
 **ontComp(InputOne = "", InputTwo = "")**
 
-The above function compares the values in two separate outputs of the geneOnt() functions by gene ontology (GO) IDs and writes a CSV to the working directory containing 4 columns: the GO IDs, the GO terms, the major ontology within which they are contained (cellular component, molecular function, or biological processes), and whether the ontology is present in the first input file, the second input file, or both.
+The above function compares the values in two separate outputs of the `geneOnt()` functions by gene ontology (GO) IDs and writes a CSV to the working directory containing 4 columns: the GO IDs, the GO terms, the major ontology within which they are contained (cellular component, molecular function, or biological processes), and whether the ontology is present in the first input file, the second input file, or both.
 
-InputOne = “”: The name of a CSV file produced from the geneOnt() function
+InputOne = “”: The name of a CSV file produced from the `geneOnt()` function
 
-InputTwo = “”: The name of a second CSV file produced from the geneOnt() function to compare against the first
+InputTwo = “”: The name of a second CSV file produced from the `geneOnt()` function to compare against the first
 
 
 # ontVenn() and ontVennSub(): A function for gene ontology enrichment analysis comparison
 
 **ontVenn(InputFile, FirstInputFileName = "Input 1", SecondInputFileName = "Input 2", FirstInputColor = 'lightgreen', SecondInputColor = 'blue', Title = "Gene Ontology Comparison")**
 
-The function above creates a Venn diagram of the ontologies listed from the output of the ontComp() function. The output file is saved as a PNG file to the working directory.
+The function above creates a Venn diagram of the ontologies listed from the output of the `ontComp()` function. The output file is saved as a PNG file to the working directory.
 
-InputFile = “”: The name of the CSV file generated from the aformentioned ontComp() function
+InputFile = “”: The name of the CSV file generated from the aformentioned `ontComp()` function
 
 FirstInputFile: The name of the first input file to label the Venn diagram. The default is “Input 1”.
 
@@ -125,7 +127,7 @@ FirstInputColor: The color of the Venn diagram section for the first input. The 
 
 SecondInputColor: The color of the Venn diagram section for the first input. The default is ‘blue’.
 
-Title: The title for the Venn diagram. The default in “Gene Ontology Comparison”.
+Title: The title for the Venn diagram. The default is “Gene Ontology Comparison”.
 
 **ontVennSub(InputFile, FirstInputFileName = "Input 1", SecondInputFileName = "Input 2", FirstInputColor = 'lightgreen', SecondInputColor = 'blue')**
 
@@ -141,4 +143,4 @@ FirstInputColor: The color of the Venn diagram section for the first input. The 
 
 SecondInputColor: The color of the Venn diagram section for the first input. The default is ‘blue’.
 
-Title: The title for the Venn diagram. The default in “Gene Ontology Comparison”.
+Title: The title for the Venn diagram. The default is “Gene Ontology Comparison”.
