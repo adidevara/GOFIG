@@ -179,7 +179,7 @@ ontBar <-
         geom_point(
           aes(y = maxCoef_BP * P_DE_Genes, x = reorder(Term, -P_DE_Genes)),
           size = 1.5,
-          color = LineColor,
+          color = PointColor,
           group = 1
         ) +
         scale_y_continuous(sec.axis = sec_axis(~ . / maxCoef_BP, name = "Adjusted P Value", breaks = bpBreaks)) +
@@ -217,7 +217,7 @@ ontBar <-
         geom_point(
           aes(y = maxCoef_MF * P_DE_Genes, x = reorder(Term, -P_DE_Genes)),
           size = 1.5,
-          color = LineColor,
+          color = PointColor,
           group = 1
         ) +
         scale_y_continuous(sec.axis = sec_axis(~ . / maxCoef_BP, name = "Adjusted P Value", breaks = bpBreaks)) +
@@ -255,7 +255,7 @@ ontBar <-
         geom_point(
           aes(y = maxCoef_CC * P_DE_Genes, x = reorder(Term, -P_DE_Genes)),
           size = 1.5,
-          color = LineColor,
+          color = PointColor,
           group = 1
         ) +
         scale_y_continuous(sec.axis = sec_axis(~ . / maxCoef_BP, name = "Adjusted P Value", breaks = bpBreaks)) +
