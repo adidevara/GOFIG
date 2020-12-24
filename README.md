@@ -14,7 +14,7 @@ GOFIG is a tool for gene ontology enrichment analysis and visualization. This to
 
 ## Installation
 
-Install the package from its source by via: `devtools::install_github(adidevara/GOFIG)`
+Install the package from its source by via: `devtools::install_github("adidevara/GOFIG")`
 Be sure to load the library after it has been installed with the `library()` function. 
 
 GOFIG requires R version `>=4.0.3` 
