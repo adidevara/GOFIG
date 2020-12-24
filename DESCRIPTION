@@ -1,0 +1,19 @@
+Package: GOFIG
+Title: A Tool for Gene Ontology Enrichment Analysis and Visualization
+Description: GOFIG is a tool for gene ontology enrichment analysis and visualization. This tool is very helpful in generating publication quality figures for the manuscripts.
+Version: 0.0.0.9000
+License: MIT + file LICENSE.md
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+biocViews:
+Depends:
+    R (>= 4.0.0),
+Imports:
+	ggplot2,
+	dplyr,
+    VennDiagram,
+    limma,
+    org.Hs.eg.db,
+    AnnotationDbi

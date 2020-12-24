@@ -1,3 +1,12 @@
+
+#' A function for gene ontology enrichment analysis
+#' @export
+#' @import ggplot2
+#' @import dplyr
+#' @import VennDiagram
+#' @import limma
+#' @import org.Hs.eg.db
+#' @import AnnotationDbi
 geneOnt <-
   function(InputFile = "",
            IDType = "SYMBOL",
@@ -10,7 +19,7 @@ geneOnt <-
     glLength <- lengths(geneList)
     geneList = unlist(geneList)
     geneList = as.character(geneList)
-    geneList = mapIds(org.Hs.eg.db, geneList, 'ENTREZID', IDType)
+    geneList = AnnotationDbi::mapIds(org.Hs.eg.db, geneList, 'ENTREZID', IDType)
     
     
     #create a dataframe of upregulated and downregulated genes
@@ -83,6 +92,9 @@ geneOnt <-
     write.csv(final, file = OutputName)
   }
 
+#' Function for visualization of the gene ontology enrichment analysis results
+#'
+#' @export
 ontBar <-
   function(InputFile = "",
            OntologyCutoff = "10",
@@ -264,6 +276,9 @@ ontBar <-
     }
   }
 
+#' Function for visualization of the gene ontology enrichment analysis results
+#'
+#' @export
 ontb2bBar <-
   function(InputFile = "",
            OntologyCutoff = "10",
@@ -501,6 +516,9 @@ ontb2bBar <-
       }
   }
 
+#' Function for visualization of the gene ontology enrichment analysis results
+#'
+#' @export
 ontBubble <-
   function(InputFile = "",
            OntologyCutoff = "10",
@@ -609,6 +627,9 @@ ontBubble <-
     dev.off()
   }
 
+#' Function for gene ontology enrichment analysis comparison
+#'
+#' @export
 ontComp <- function(InputOne = "",
                     InputTwo = "") {
   first <- read.csv(InputOne)
@@ -639,6 +660,9 @@ ontComp <- function(InputOne = "",
   write.csv(output, file = "out.csv", row.names = FALSE)
 }
 
+#' Function for gene ontology enrichment analysis comparison
+#'
+#' @export
 ontVenn <-
   function(InputFile,
            FirstInputFileName = "Input 1",
@@ -665,6 +689,9 @@ ontVenn <-
     )
   }
 
+#' Function for gene ontology enrichment analysis comparison
+#'
+#' @export
 ontVennSub <-
   function(InputFile,
            FirstInputFileName = "Input 1",
