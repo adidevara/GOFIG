@@ -12,17 +12,12 @@ While there are many existing packages and online programs for Gene Ontology (GO
 
 GOFIG is a tool for gene ontology enrichment analysis and visualization. This tool is very helpful in generating publication quality figures for the manuscripts. A list of differentially expressed genes and log fold-changes are used as input. Various ontology terms over-represented in the gene list are identified and p-values are assigned, which represent the significance of enrichment of each ontology term. Along with the ontology terms and the p-values, the analysis output includes the total number of genes, the number of upregulated genes, and downregulated genes in each ontology term. Ontology terms will only be included in the output if they contain at least 10% of the total number of differentially expressed genes provided in the input list. All p-values are calculated based on the total number of genes in the ontology rather than just the number of upregulated or downregulated genes. After analysis, the output is saved to the working directory as a CSV file. If multiple analyses are performed, they can be compared with in built functionality as well. The results of the enrichment analysis as well as comparisons can be visualized through the use of any of the various visualization functions. 
 
-## Dependencies
+## Installation
 
-The required packages which must be installed and loaded for the functions in GOFIG to work include: `ggplot2`, `dplyr`, `VennDiagram`, `limma`, and `org.Hs.eg.db`. 
-
-`ggplot2`, `dplyr`, and `VennDiagram` can all be loaded in CRAN using the `install.packages()` function. 
-
-`limma` and `org.Hs.eg.db` must be loaded through Bioconductor. To do this, use the `install.packages()` function to install BiocManager after which you can use the BiocManager::install package to load `limma` and `org.Hs.eg.db`.
+Install the package from its source by via: `devtools::install_github(adidevara/GOFIG)`
+Be sure to load the library after it has been installed with the `library()` function. 
 
 GOFIG requires R version `>=4.0.3` 
-
-Be sure to load the libraries that have been installed with the `library()` function. 
 
 ## Directory Setting 
 
