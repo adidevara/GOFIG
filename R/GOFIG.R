@@ -6,7 +6,7 @@
 #' @import VennDiagram
 #' @import limma
 #' @import org.Hs.eg.db
-#' @import AnnotationDbi
+#' @importFrom AnnotationDbi mapIds
 geneOnt <-
   function(InputFile = "",
            IDType = "SYMBOL",
