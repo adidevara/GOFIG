@@ -2,7 +2,7 @@
 
 
 
-## Script, Libraries, and directories
+## Installation, Libraries, and directories
 
 **Script**
 
@@ -10,34 +10,16 @@ Please download the GOFIG.r script from the GitHub repository. If using RStudio,
 
 **Directory**
 
-The functions will automatically search and save the files to the working directory. Please be sure to set your working directory to the directory containing the input files using the `setwd()` function. 
+Install the package from its source by via: `devtools::install_github("adidevara/GOFIG")`
+Be sure to load the library after it has been installed with the `library()` function. 
 
-**Library**
+GOFIG requires R version `>=4.0.3` 
 
-GOFIG is dependent on `dplyr`, `VennDiagram`, and `ggplot2` from the CRAN repository. To install and load these packages, please type the following into the terminal: 
+**Dependencies**
 
-```
-install.packages("dplyr")
-install.packages("VennDiagram") 
-install.packages("ggplot2") 
+GOFIG is dependent on `dplyr`, `VennDiagram`, and `ggplot2` from the CRAN repository. 
 
-library(dplyr)
-library(VennDiagram)
-library(ggplot2) 
-```
-
-GOFIG is also dependent on `org.Hs.eg.db` and `limma `from the BioConductor repository. To install and load these packages, please type the following into the terminal: 
-
-```
-install.packages("BiocManager")
-BiocManager::install("limma")
-BiocManager::install("org.Hs.eg.db")
-
-library(limma)
-library(org.Hs.eg.db) 
-```
-
-After installing and loading the following, the script should have all of the necessary libraries loaded.
+GOFIG is also dependent on `org.Hs.eg.db`, `AnnotationDbi`, and `limma `from the BioConductor repository.
 
 ## Test Files 
 
