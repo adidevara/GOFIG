@@ -75,7 +75,7 @@ BarColor: The color of the bar. The default is “lightgreen”.
 
 PointColor: The color of the p-value line. The default is “darkblue”.
 
-**ontb2bBar****(InputFile = "", OntologyCutoff = "10", UpBarColor = "lightgreen", DownBarColor = "lightblue", PointColor = "darkblue")**
+**ontb2bBar(InputFile = "", OntologyCutoff = "10", UpBarColor = "lightgreen", DownBarColor = "lightblue", PointColor = "darkblue")**
 
 The above function production produces a three back to back bar plots, each containing the most significant ontologies (by p-value) in the cellular component, molecular function, and biological processes category. The bar on the right side represents the number of upregulated genes in an ontology and the bar on the left side represents the number of downregulated genes in an ontology. Overlayed on the bars on the right is a series of points which depict the p-value of each ontology.
 
@@ -89,7 +89,7 @@ DownBarColor: The color of the bar representing the downregulated genes in the o
 
 PointColor: The color of the p-value line. The default is “darkblue”.
 
-**ontBubble(****InputFile = "", OntologyCutoff = "10", BubbleOutline = “darkblue”, BubbleFill = “lightblue”)**
+**ontBubble(InputFile = "", OntologyCutoff = "10", BubbleOutline = “darkblue”, BubbleFill = “lightblue”)**
 
 The above function production produces a three bubble plots each containing the most significant ontologies (by p-value) in the cellular component, molecular function, and biological processes category. The they are distributed across the x-axis based on their pseudo-z-score ( the calculation of which was described above, as well as the log of their adjusted p-values across the y-axis.
 
